@@ -29,10 +29,11 @@ namespace Repaso2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
             this.cboCarrera = new System.Windows.Forms.ComboBox();
             this.listDesarrollo = new System.Windows.Forms.ListBox();
             this.listSoporte = new System.Windows.Forms.ListBox();
@@ -45,6 +46,8 @@ namespace Repaso2
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.errorprove = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorprove)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,12 +78,12 @@ namespace Repaso2
             this.label3.TabIndex = 2;
             this.label3.Text = "Carrera";
             // 
-            // textBox1
+            // txtnombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(289, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 23);
-            this.textBox1.TabIndex = 3;
+            this.txtnombre.Location = new System.Drawing.Point(289, 110);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(129, 23);
+            this.txtnombre.TabIndex = 3;
             // 
             // cboCarrera
             // 
@@ -189,6 +192,10 @@ namespace Repaso2
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
             // 
+            // errorprove
+            // 
+            this.errorprove.ContainerControl = this;
+            // 
             // frmRepaso2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -206,12 +213,13 @@ namespace Repaso2
             this.Controls.Add(this.listSoporte);
             this.Controls.Add(this.listDesarrollo);
             this.Controls.Add(this.cboCarrera);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmRepaso2";
             this.Text = "REPASO 02 - ESTRUCTURA CONDICIONAL";
+            ((System.ComponentModel.ISupportInitialize)(this.errorprove)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,7 +230,7 @@ namespace Repaso2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.ComboBox cboCarrera;
         private System.Windows.Forms.ListBox listDesarrollo;
         private System.Windows.Forms.ListBox listSoporte;
@@ -235,6 +243,7 @@ namespace Repaso2
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.ErrorProvider errorprove;
     }
 }
 
