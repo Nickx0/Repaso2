@@ -154,6 +154,7 @@ namespace Repaso2
             this.btnMayor.TabIndex = 11;
             this.btnMayor.Text = ">>";
             this.btnMayor.UseVisualStyleBackColor = true;
+            this.btnMayor.Click += new System.EventHandler(this.btnMayor_Click);
             // 
             // btnMenor
             // 
@@ -163,6 +164,7 @@ namespace Repaso2
             this.btnMenor.TabIndex = 12;
             this.btnMenor.Text = "<<";
             this.btnMenor.UseVisualStyleBackColor = true;
+            this.btnMenor.Click += new System.EventHandler(this.btnMenor_Click);
             // 
             // btnAgregar
             // 

@@ -50,5 +50,51 @@ namespace Repaso2
             txtnombre.Focus();
 
         }
+
+        private void btnMayor_Click(object sender, EventArgs e)
+        {
+            if(listDesarrollo.Items.Count==0)
+            {
+                btnMayor.Enabled = false;
+                return;
+            }
+            if(listDesarrollo.SelectedIndex==-1)
+            {
+                MessageBox.Show("Seleccione un Estudiante");
+                listDesarrollo.Focus();
+            }
+            else
+            {
+                listSoporte.Items.Add(listDesarrollo.Text);
+                listDesarrollo.Items.RemoveAt(listDesarrollo.SelectedIndex);
+                txtSoporte.Text = listSoporte.Items.Count.ToString("n0");
+                txtDesarrollo.Text = listDesarrollo.Items.Count.ToString("n0");
+                btnMenor.Enabled = true;
+
+            }
+        }
+
+        private void btnMenor_Click(object sender, EventArgs e)
+        {
+            if (listSoporte.Items.Count == 0)
+            {
+                btnMenor.Enabled = false;
+                return;
+            }
+            if (listSoporte.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un Estudiante");
+                listSoporte.Focus();
+            }
+            else
+            {
+                listDesarrollo.Items.Add(listSoporte.Text);
+                listSoporte.Items.RemoveAt(listSoporte.SelectedIndex);
+                txtDesarrollo.Text = listDesarrollo.Items.Count.ToString("n0");
+                txtSoporte.Text = listSoporte.Items.Count.ToString("n0");
+                btnMayor.Enabled = true;
+
+            }
+        }
     }
 }
