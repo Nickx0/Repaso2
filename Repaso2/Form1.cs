@@ -19,7 +19,7 @@ namespace Repaso2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //xd prro
+            //este boton no va hacer ni mrd pero por algo lo hago
         }
     }
 }
