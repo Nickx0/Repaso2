@@ -115,5 +115,17 @@ namespace Repaso2
             txtDesarrollo.Text = "0";
             txtSoporte.Text = "0";
         }
+
+        private void txtnombre_TextChanged(object sender, EventArgs e)
+        {
+            if(txtnombre.Text.Length==0)
+            {
+                btnAgregar.Enabled = false;
+            }
+            else
+            {
+                btnAgregar.Enabled = true;
+            }
+        }
     }
 }

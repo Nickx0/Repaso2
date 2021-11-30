@@ -84,6 +84,7 @@ namespace Repaso2
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(129, 23);
             this.txtnombre.TabIndex = 3;
+            this.txtnombre.TextChanged += new System.EventHandler(this.txtnombre_TextChanged);
             // 
             // cboCarrera
             // 
