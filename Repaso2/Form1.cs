@@ -96,5 +96,24 @@ namespace Repaso2
 
             }
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea Salir?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            listDesarrollo.Items.Clear();
+            listSoporte.Items.Clear();
+            cboCarrera.SelectedIndex = -1;
+            txtnombre.Clear();
+            txtnombre.Focus();
+            txtDesarrollo.Text = "0";
+            txtSoporte.Text = "0";
+        }
     }
 }
